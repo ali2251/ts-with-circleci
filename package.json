@@ -10,7 +10,8 @@
     "build": "tsc",
     "start": "node lib",
     "format": "prettier '*.{js,json,md}' 'src/**/*' --write",
-    "precommit": "lint-staged"
+    "precommit": "lint-staged",
+    "test": "echo "No test for now" "
   },
   "lint-staged": {
     "*.{js,json,md,ts}": ["npm run format", "git add"]
