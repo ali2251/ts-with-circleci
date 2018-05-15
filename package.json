@@ -1,0 +1,49 @@
+{
+  "name": "spike-stack",
+  "version": "0.0.0",
+  "license": "MIT",
+  "homepage": "https://github.com/r-block/spike-stack#readme",
+  "author": "Matthew Wagerfield <matthew@rblock.com>",
+  "main": "lib/index.js",
+  "scripts": {
+    "dev": "DEBUG=server nodemon",
+    "build": "tsc",
+    "start": "node lib",
+    "format": "prettier '*.{js,json,md}' 'src/**/*' --write",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,json,md,ts}": ["npm run format", "git add"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r-block/spike-stack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/r-block/spike-stack/issues"
+  },
+  "dependencies": {
+    "@types/compression": "^0.0.36",
+    "@types/cors": "^2.8.4",
+    "@types/debug": "^0.0.30",
+    "@types/express": "^4.11.1",
+    "@types/morgan": "^1.7.35",
+    "body-parser": "^1.18.3",
+    "compression": "^1.7.2",
+    "cors": "^2.8.4",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "morgan": "^1.9.0"
+  },
+  "devDependencies": {
+    "husky": "^0.14.3",
+    "jest": "^22.4.3",
+    "lint-staged": "^7.1.0",
+    "nodemon": "^1.17.4",
+    "prettier": "1.12.1",
+    "ts-node": "^6.0.3",
+    "tslint": "^5.10.0",
+    "tslint-config-prettier": "^1.12.0",
+    "typescript": "^2.8.3"
+  }
+}
