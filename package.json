@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "DEBUG=server nodemon",
     "build": "tsc",
-    "start": "tsc && node lib",
+    "start": "npm run-script build && node lib",
     "format": "prettier '*.{js,json,md}' 'src/**/*' --write",
     "precommit": "lint-staged",
     "test": "ls"
@@ -45,6 +45,7 @@
     "prettier": "1.12.1",
     "ts-node": "^6.0.3",
     "tslint": "^5.10.0",
-    "tslint-config-prettier": "^1.12.0"
+    "tslint-config-prettier": "^1.12.0",
+    "typescript": "^2.8.3"
   }
 }
