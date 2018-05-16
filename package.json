@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "DEBUG=server nodemon",
     "build": "tsc",
-    "start": "npm run-script build && node lib",
+    "start": "tsc && node lib",
     "format": "prettier '*.{js,json,md}' 'src/**/*' --write",
     "precommit": "lint-staged",
     "test": "ls"
