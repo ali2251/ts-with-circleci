@@ -5,7 +5,7 @@ WORKDIR /usr/src/app
 COPY package.json .
 
 RUN yarn install
-RUN yarn build
+RUN tsc $BUILD_SOURCESDIRECTORY
 
 COPY lib lib
 
