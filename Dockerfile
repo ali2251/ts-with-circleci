@@ -1,16 +1,12 @@
-FROM node:8.11.1
-MAINTAINER Azure App Services Container Images <appsvc-images@microsoft.com>
+FROM node:carbon
 
-# Create app directory
-WORKDIR /src
+WORKDIR /usr/src/app
 
-# Install app dependencies
-COPY package.json .
+COPY package*.json ./
 
 RUN yarn install
 
-# Bundle app source
-COPY . .
+COPY lib lib
 
-EXPOSE 8080 80
-CMD [ "npm", "start" ]
+EXPOSE 3000
+CMD [ "yarn", "start" ]
