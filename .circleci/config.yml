@@ -29,7 +29,7 @@ jobs:
       - run:
           name: Deploy Over SSH
           command: |
-            ssh $SSH_USER@$SSH_HOST "ls; cd mvp-api; git pull; yarn install; yarn build; yarn start"
+            ssh $SSH_USER@$SSH_HOST "ls; cd mvp-api; git pull; node -v; yarn install; yarn build; yarn start"
 
 workflows:
   version: 2
